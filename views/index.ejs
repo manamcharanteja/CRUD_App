@@ -1,0 +1,37 @@
+
+    <%- include("_header.ejs") %>
+
+    <div class="container my-3 body">
+
+
+        <h3 class="text-center">Total Number Of Employees = <%=employees.length %></h3>
+
+        <a class="btn btn-lg btn-success" href="/create">Create a new Data</a><br/><br/>
+
+        <table class="table table-light table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Salary</th>
+                <th scope="col">email</th>
+                <th scope="col">Edit/Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% for (employee of employees){ %>
+              <tr>
+                  <td><%= employee.name%></td>
+                  <td><%= employee.role%></td>
+                  <td><%=employee.salary%></td>
+                  <td><%=employee.email%></td>
+                  <td class="d-print-none">
+                    <a class="btn btn-sm btn-info" href="/edit/<%= employee.employee_id %>">Modify</a>
+                    <a class="btn btn-sm btn-danger" href="/delete/<%= employee.employee_id %>">Remove</a>
+                  </td>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+    <%- include("_footer.ejs") %>

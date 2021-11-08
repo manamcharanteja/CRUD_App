@@ -1,0 +1,15 @@
+<%- include("_header.ejs") %>
+<div class="container body">
+<center>
+    <h1 class="my-3">Create a record</h1>
+</center>
+<form class="my-3" action="/create" method="post">
+
+<%- include("_display.ejs") %>
+
+<button type="submit" value="save" class="btn btn-info btn-lg" id="addbtn">Add new Employee</button>
+<a class="btn btn-danger  btn-lg cancel" href="/">Cancel</a>
+</form>
+</div>
+
+<%- include("_footer.ejs") %>

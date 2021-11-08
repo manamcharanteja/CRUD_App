@@ -1,0 +1,17 @@
+<%- include("_header.ejs") %>
+<div class="container body">
+    <center>
+        <h1 class="my-3">Update a record</h1>
+    </center>
+    <form class="my-3" action="/edit/<%=employee.employee_id%>" method="post">
+       
+        <%- include("_editor.ejs") %>
+       
+        <button type="submit" value="update" class="btn btn-primary btn-lg" id="addbtn">Edit Employee details</button>
+        <a class="btn btn-danger  btn-lg cancel" href="/">Cancel</a>
+    </form>
+
+</div>
+
+    
+<%- include("_footer.ejs") %>

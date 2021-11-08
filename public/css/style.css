@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.body{
+    min-height: calc(100vh - 56px - 88px);
+}
+.foot{
+    text-align: center;
+}
